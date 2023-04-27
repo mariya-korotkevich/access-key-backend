@@ -9,7 +9,7 @@ import java.net.UnknownHostException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class Ipv6ServiceImplTest {
+class Ipv6ServiceTest {
 
     private static Ipv6Service service;
 
