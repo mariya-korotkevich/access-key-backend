@@ -1,5 +1,6 @@
 package com.example.accesskeybackend.ipv6.controller;
 
+import com.example.accesskeybackend.exception.IllegalArgumentException;
 import com.example.accesskeybackend.ipv6.service.Ipv6Service;
 import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.http.ResponseEntity;
@@ -26,13 +27,7 @@ public class Ipv6Controller {
         try {
             return ResponseEntity.ok(service.checkIpv6Support(siteUrl));
         } catch (UnknownHostException e) {
-            throw new RuntimeException(e);
+            throw new IllegalArgumentException(e.getMessage(), e);
         }
     }
 }
-/*habr.com
-stepik.org
-
-ya.ru
-translate.google.com
- */
